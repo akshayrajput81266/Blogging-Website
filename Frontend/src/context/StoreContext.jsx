@@ -18,7 +18,7 @@ const StoreContextProvider = ({ children }) => {
     const allBlogs = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:4000/blog/all", {
+        const res = await axios.get("https://blogging-website-5032.onrender.com/blog/all", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
