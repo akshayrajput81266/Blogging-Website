@@ -47,7 +47,7 @@ const Dashboard = () => {
     data.append("image", formData.image);
 
     try {
-      const res = await axios.post("http://localhost:4000/blog/create", data, {
+      const res = await axios.post("https://blogging-website-5032.onrender.com/blog/create", data, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const Dashboard = () => {
     const allBlogs = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:4000/blog/all", {
+        const res = await axios.get("https://blogging-website-5032.onrender.com/blog/all", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -93,7 +93,7 @@ const Dashboard = () => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:4000/blog/delete/${blogId}`,
+        `https://blogging-website-5032.onrender.com/blog/delete/${blogId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -222,7 +222,7 @@ const Dashboard = () => {
                             src={
                               blog.image?.startsWith("http")
                                 ? blog.image
-                                : `http://localhost:4000/images/${blog.image}`
+                                : `https://blogging-website-5032.onrender.com/images/${blog.image}`
                             }
                             alt={blog.title}
                             className="w-16 h-16 object-cover mx-auto"
