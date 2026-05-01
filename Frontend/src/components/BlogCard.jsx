@@ -12,7 +12,7 @@ const BlogCard = ({
     <div className="border-1 border-gray-300 shadow-md p-3 rounded-md">
       <Link to={`/blog/${id}`}>
         <img
-          src={image?.startsWith("http") ? image : `http://localhost:4000/images/${image}`}
+          src={image?.startsWith("http") ? image : `https://blogging-website-5032.onrender.com/images/${image}`}
           alt=""
           className="w-full h-48 object-cover rounded-md cursor-pointer transform duration-300 hover:scale-105"
         />
